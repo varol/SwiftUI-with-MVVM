@@ -18,8 +18,8 @@ class StoryListViewModel: ObservableObject {
     }
     
     private func fetchTopStories() {
-        self.cancellable = WebService().getAllTopStories().map { storyIds in
-            storyIds.map { StoryViewModel(id: $0)}
+        self.cancellable = WebService().getAllTopStories().map { stories in
+            stories.map { StoryViewModel(story: $0)}
         }.sink(receiveCompletion: { _ in }, receiveValue: { storyViewModels in
             self.stories = storyViewModels
         })
@@ -27,6 +27,16 @@ class StoryListViewModel: ObservableObject {
 }
 
 struct StoryViewModel {
-    let id: Int
+    let story: Story
+    var id: Int {
+        story.id
+    }
     
+    var title: String {
+        story.title
+    }
+    
+    var url: String {
+        story.url
+    }
 }
