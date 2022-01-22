@@ -12,17 +12,10 @@ import Combine
 
 class StoryDetailViewModel: ObservableObject {
     
-    var storyId: Int
     private var cancellable: AnyCancellable?
     @Published private var story: Story?
 
-    init(storyId: Int) {
-        self.storyId = storyId
-        
-        fetchStoryById(storyId)
-    }
-    
-    private func fetchStoryById(_ storyId: Int) {
+    func fetchStoryById(_ storyId: Int) {
         self.cancellable = WebService().getStoryById(storyId: storyId)
             .sink(receiveCompletion: { _ in }, receiveValue: { story in
                 self.story = story
@@ -35,7 +28,8 @@ extension StoryDetailViewModel {
         story?.title
     }
     
-    var url: String? {
-        story?.url
+    var url: String {
+        guard let url = story?.url else { return ""}
+        return url
     }
 }

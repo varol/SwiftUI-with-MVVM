@@ -16,6 +16,8 @@
 		E4D8572A279C829200C952BE /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D85729279C829200C952BE /* Story.swift */; };
 		E4D8572C279C840C00C952BE /* StoryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D8572B279C840C00C952BE /* StoryDetailViewModel.swift */; };
 		E4D8572E279C860000C952BE /* StoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D8572D279C860000C952BE /* StoryDetailView.swift */; };
+		E4D85730279C900E00C952BE /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D8572F279C900E00C952BE /* WebView.swift */; };
+		E4D85733279C96D900C952BE /* WKWebView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D85732279C96D900C952BE /* WKWebView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		E4D85729279C829200C952BE /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		E4D8572B279C840C00C952BE /* StoryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDetailViewModel.swift; sourceTree = "<group>"; };
 		E4D8572D279C860000C952BE /* StoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDetailView.swift; sourceTree = "<group>"; };
+		E4D8572F279C900E00C952BE /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		E4D85732279C96D900C952BE /* WKWebView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WKWebView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 		E4D8570F279C780E00C952BE /* SwiftUI HackerNews With Combine */ = {
 			isa = PBXGroup;
 			children = (
+				E4D85731279C96C500C952BE /* Extensions */,
 				E4D85728279C827C00C952BE /* Models */,
 				E4D85725279C7CD100C952BE /* Views */,
 				E4D85722279C7A8100C952BE /* ViewModels */,
@@ -102,6 +107,7 @@
 			children = (
 				E4D85726279C7CF800C952BE /* StoryListView.swift */,
 				E4D8572D279C860000C952BE /* StoryDetailView.swift */,
+				E4D8572F279C900E00C952BE /* WebView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -112,6 +118,14 @@
 				E4D85729279C829200C952BE /* Story.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		E4D85731279C96C500C952BE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E4D85732279C96D900C952BE /* WKWebView+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +199,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4D85724279C7AAF00C952BE /* StoryListViewModel.swift in Sources */,
+				E4D85730279C900E00C952BE /* WebView.swift in Sources */,
+				E4D85733279C96D900C952BE /* WKWebView+Extensions.swift in Sources */,
 				E4D8572C279C840C00C952BE /* StoryDetailViewModel.swift in Sources */,
 				E4D8572E279C860000C952BE /* StoryDetailView.swift in Sources */,
 				E4D85721279C78E600C952BE /* WebService.swift in Sources */,

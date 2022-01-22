@@ -10,20 +10,25 @@ import SwiftUI
 struct StoryDetailView: View {
     
     @ObservedObject private var storyDetailVM: StoryDetailViewModel
+    var storyId: Int
     
     init(storyId: Int) {
-        self.storyDetailVM = StoryDetailViewModel(storyId: storyId)
+        self.storyId = storyId
+        self.storyDetailVM = StoryDetailViewModel()
     }
     
     var body: some View {
         VStack {
             Text(self.storyDetailVM.title ?? "")
+            WebView(url: storyDetailVM.url)
+        }.onAppear {
+            self.storyDetailVM.fetchStoryById(storyId)
         }
     }
 }
 
 struct StoryDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        StoryDetailView(storyId: 8863)
+        StoryDetailView(storyId: 0)
     }
 }
